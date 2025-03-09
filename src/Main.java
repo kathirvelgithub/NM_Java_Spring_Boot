@@ -45,11 +45,24 @@ public class Main {
 
         System.out.println(staff1.student);
         System.out.println(staff1.student.get(0).name);
-        System.out.println(staff1.student.get(1).name);
-        System.out.println(staff1.student.get(2).name);
-        System.out.println(staff1.student.get(3).name);
-        System.out.println(staff1.student.get(4).name);
+        System.out.println(staff1.student.get(0).id);
+        System.out.println(staff1.student.get(0).clg);
 
+        System.out.println(staff1.student.get(1).name);
+        System.out.println(staff1.student.get(1).id);
+        System.out.println(staff1.student.get(1).clg);
+
+        System.out.println(staff1.student.get(2).name);
+        System.out.println(staff1.student.get(2).id);
+        System.out.println(staff1.student.get(2).clg);
+
+        System.out.println(staff1.student.get(3).name);
+        System.out.println(staff1.student.get(3).id);
+        System.out.println(staff1.student.get(3).clg);
+
+        System.out.println(staff1.student.get(4).name);
+        System.out.println(staff1.student.get(4).id);
+        System.out.println(staff1.student.get(4).clg);
 
     }
 }
