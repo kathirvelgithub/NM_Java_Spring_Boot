@@ -2,20 +2,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 class  std{
+    String name ;
+    int id ;
+    String clg ;
+
     std(String n, int i, String c){
-        String name;
-        int id ;
-        String clg;
+        this.name = n;
+        this.id = i;
+        this.clg = c;
     }
 }
 
  class  staff{
+     String name ;
+     int id ;
+     String clg ;
      staff(String n, int i, String c){
-         String name;
-         int id ;
-         String clg;
+         this.name = n;
+         this.id = i;
+         this.clg = c;
      }
-     List<std> student = new ArrayList<>();
+     List<std> student = new ArrayList<std>();
  }
 
 
@@ -37,5 +44,12 @@ public class Main {
         staff1.student.add(s5);
 
         System.out.println(staff1.student);
+        System.out.println(staff1.student.get(0).name);
+        System.out.println(staff1.student.get(1).name);
+        System.out.println(staff1.student.get(2).name);
+        System.out.println(staff1.student.get(3).name);
+        System.out.println(staff1.student.get(4).name);
+
+
     }
 }
