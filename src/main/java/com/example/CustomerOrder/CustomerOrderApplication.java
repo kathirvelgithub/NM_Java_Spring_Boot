@@ -12,7 +12,5 @@ public class CustomerOrderApplication {
 
 		SpringApplication.run(CustomerOrderApplication.class, args);
 
-
-
 	}
 }

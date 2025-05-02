@@ -18,23 +18,23 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @PostMapping//("/add_order")
+    @PostMapping("/add_order")
     public String save(@RequestBody Order order) {
         orderService.save(order);
         return "stored successfully";
     }
 
-    @GetMapping//("/add_order")
+    @GetMapping("/get_order")
     public List<Order> getOrders() {
         return orderService.getOrders();
     }
 
-    @GetMapping("/id")
+    @GetMapping("/get_order/id")
     public List<Order> getOrdersById(@PathVariable (name = "id") long id) {
-        return orderService.getOrderById(id);
+        return (List<Order>) orderService.getOrderById(id);
     }
 
-    @DeleteMapping("/id")
+    @DeleteMapping("delete_order/id")
     public String deleteOrder (@PathVariable(name = "id") long id){
         if(orderService.getOrderById(id)!=null){
             orderService.deleteOrder(id);

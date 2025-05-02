@@ -14,24 +14,24 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @PostMapping//("/add")
+    @PostMapping("/add")
     public String save(@RequestBody Customer customer) {
         customerService.save(customer);
         return "stored successfully";
      }
 
 
-    @GetMapping//("/get")
+    @GetMapping("/get")
     public List<Customer> getAll(){
         return customerService.getAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public Customer getbyId(@PathVariable(name="id") long id){
         return customerService.getbyId(id);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public String delete(@PathVariable(name="id") long id){
         if(customerService.getbyId(id)!= null) {
             customerService.delete(id);
